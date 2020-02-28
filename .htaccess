@@ -1,0 +1,12 @@
+#restringe el acceso todas las carpetas
+Options All -Indexes 
+
+#redirecionamiento dependiendo del tipo de error 
+ErrorDocument 404 /control-de-entrada/modulos/404.php
+ErrorDocument 403 /control-de-entrada/modulos/403.php
+
+#configuraciones php para subir archivos con mayor peso que el permitido por php
+php_value max_file_uploads 1000
+php_value upload_max_filesize 600M
+php_value post_max_size 600M
+php_value max_execution_time 1000
